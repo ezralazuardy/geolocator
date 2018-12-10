@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="assets/css/stylesheet.css" rel="stylesheet">
     <link href="assets/css/leaflet.css" rel="stylesheet"/>
+    <link href="assets/css/nunito.css" rel="stylesheet">
     <title>Geolocator</title>
 </head>
 <body>
-    <h2>Geolocator to get your data location</h2>
-    <div id="main-div" class="card">
-        <label class="label">Click the button below to start Geolocating</label><br><br><br>
-        <input id="button" type="button" value="Get my geolocation" onclick="geolocation()">
-        <br><br>
-        <label id="output" class="label"></label>
+    <h4>Geolocator</h4>
+    <div class="card" id="main-div">
+        <label class="label">Click the button below to start geolocating you location.</label>
+        <br>
+        <br>
+        <input id="button" type="button" value="Locate" onclick="geolocation()">
+        <label id="output" class="label-output"></label>
         <label id="preview" class="label"></label>
-        <div id="osm-map"></div>
+        <div id="osm-map" class="map"></div>
     </div>
-    <div class="card" id="info">Created with ♡ by Ezra Lazuardy.</div>
+    <div class="card-info" id="info">
+    	<label class="label">Hosted with ♡ at <b>GitHub</b>. Created by <a href="https://github.com/ezralazuardy">Ezra Lazuardy</a>.</label>
+    </div>
+    <br>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/leaflet.js"></script>
 </body>

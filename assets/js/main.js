@@ -3,7 +3,7 @@ let out = document.getElementById("out")
 const geolocation = () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(rit, fileit);
-        document.getElementById("button").value = "Get my geolocation again";
+        document.getElementById("button").value = "Relocate";
         document.getElementById("button").onclick = "window.location.reload();"; // reloads and executes the geolocation();
     } else {
         output.innerHTML = "Geolocation is not supported by this browser";
@@ -12,8 +12,8 @@ const geolocation = () => {
 }
 
 const rit = (position) => {
-    let mylocation = `Lat: ${position.coords.latitude}<br>`;
-    mylocation += `Long: ${position.coords.longitude}<br><br>`;
+    let mylocation = `<b>Lat:</b> ${position.coords.latitude}<br>`;
+    mylocation += `<b>Long:</b> ${position.coords.longitude}`;
     output.innerHTML = mylocation;
     my_preview = `https://www.google.com/maps/?q=${position.coords.latitude},${position.coords.longitude}`;
     preview.innerHTML = `<a target='_blank' href='${my_preview}>Google Maps!</a><br><br>`;
@@ -21,7 +21,7 @@ const rit = (position) => {
     element.style = 'height:300px;';
     let map = L.map(element);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     let target = L.latLng(position.coords.latitude, position.coords.longitude);
     map.setView(target, 14);

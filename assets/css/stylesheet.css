@@ -1,11 +1,11 @@
 body {
-    background: #eee;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #eeeeee;
+    font-family: 'Nunito', sans-serif;
 }
 
-h2 {
+h4 {
     color: #7c795d;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 40px;
@@ -15,24 +15,40 @@ h2 {
 }
 
 .card {
-    width: 60%;
     margin-left: 20%;
     margin-right: 20%;
-    background: #FFF;
+    background: #ffffff;
     text-align: center;
     margin-top: 2%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    padding: 20px 0 20px 0;
+    padding: 40px 0px 0px 0px;
+}
+
+.card-info {
+    margin-left: 20%;
+    margin-right: 20%;
+    background: #ffffff;
+    text-align: center;
+    margin-top: 2%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 20px;
 }
 
 .label {
     font-size: 18px;
 }
 
+.label-output {
+    font-size: 18px;
+    margin: -10px 10px 10px 10px;
+}
+
 #button {
     width: 40%;
     padding: 10px;
+    margin: 10px 10px 40px 10px;
     cursor: pointer;
     border: none;
     background-color: #4285f4;
@@ -40,9 +56,12 @@ h2 {
     font-size: 20px;
 }
 
+.map {
+    margin-top: 40px;
+}
+
 #output {
     font-size: 15px;
-    border-top: 1px solid #4285f4;
     padding-top:5px;
     margin-right:5%;
     margin-left:5%;
